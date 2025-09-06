@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiran's Certificates</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+header {
+  background: #ff004f;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 20px;
+}
+
+#certificates h2 {
+  font-size: 36px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.certificate-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 0, 79, 0.3);
+  transition: transform 0.3s;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff004f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e60045;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+</style>
+<body>
+  <header>
+    <div class="container">
+      <h1>Kiran Kendre</h1>
+      <p>My Achievements & Certifications</p>
+    </div>
+  </header>
+
+  <section id="certificates" class="container">
+    <h2>My Certificates</h2>
+    <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="images/logo copy.png" alt="Certificate 1">
+        <h3>Python for Beginners</h3>
+        <a href="certificates/certificate1.pdf" download class="btn">Download</a>
+      </div>
+      <div class="certificate-card">
+        <img src="images/background.png" alt="Certificate 2">
+        <h3>Data Analytics with Excel</h3>
+        <a href="certificates/certificate2.pdf" download class="btn">Download</a>
+      </div>
+      <!-- Add more certificates below in same format -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kiran Kendre | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

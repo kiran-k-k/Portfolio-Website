@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiranKendre.com</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a1858b4ce2.js" crossorigin="anonymous"></script>
+     <link rel="icon" type="image/x-icon" href="images/Icon.png">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpeg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#CV">cv</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="headet-text">
+           <p>Hi, I am </p>
+            <h1><span>K</span>iran Kendre<br>  Fullstack Devloper</h1>
+        </div>
+    </div>
+</div>
+<!-- -------About------ -->
+<div id="about">
+    <div class="cointaner">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-tytle">About Me</h1>
+                <p>     I am Kiran Kishanrao Kendre, a passionate and dedicated engineering student currently 
+                    in my third year. With a strong interest in technology, programming, and problem-solving, 
+                    I continuously strive to enhance my skills and knowledge in the field of software development. 
+                    I enjoy exploring new tools and frameworks, and I am currently learning full stack development
+                    and data science to broaden my expertise. I believe in consistent learning, teamwork, and 
+                    building solutions that create a positive impact. My goal is to grow as a professional while 
+                    contributing to meaningful projects and innovations.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><Span>Programming Languages</Span><br>C, C++, & Java </li>
+                        <li><Span>Web Development</Span><br>HTML, CSS, JavaScript, Bootstrap, React.js / Angular</li>
+                        <li><Span>Backend</Span><br>Core Java, Java EE, Spring Framework, Spring Boot, REST APIs</li>
+                        <li><Span>Database</Span><br>MySQL, MongoDB (NoSQL concepts)</li>
+                        <li><Span>Version Control</Span><br>Git, GitHub</li>
+                        <li><Span>Soft Skills</Span><br>Problem-solving, Team collaboration, Communication, Time management, Critical thinking, Adaptability</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experiance">
+                    <ul>
+                        <li><Span>Java Full Stack Developer Virtual Internship</Span><br>Completed a 10-week virtual internship in Java Full Stack Development under the National Internship Portal, supported by AICTE and EduSkills. Gained hands-on experience with backend technologies like Java and Spring Boot, and frontend tools such as HTML, CSS, and JavaScript. Built end-to-end applications, improved debugging and deployment skills, and worked collaboratively in virtual team environments.</li>
+                        <li><Span>Technical Event Coordinator – CSE Department</Span><br>Led the organization of college-level technical events and industrial visits as part of the Computer Science Department. Successfully coordinated the “Reflex 2K25” national techfest, managing event logistics, technical activities, registrations, and team coordination. Additionally, organized an industrial visit, handling communication with the company, travel planning, and ensuring a valuable learning experience for participants. Developed leadership, public speaking, planning, and collaboration skills.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><Span>Bachelor of Technology in Computer Science and Engineering</Span><br>Ashokrao Mane Group of Institution, Vathar.   ​CGPA: 7.01</li>
+                        <li><Span>Class XII</Span><br>Narsamata Post Basic Ashram School, Nawandi ​Percentage: 63.33</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--services-->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-tytle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Full Stack Web Development</h2>
+                <p>I provide end-to-end web application development using React (frontend) and Spring Boot (backend) integrated with MySQL/MongoDB. This service includes responsive UI, secure APIs, and deployment-ready solutions for businesses.</p>
+                <a href="#">Learn More..</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-table"></i>
+                <h2>API Development & Integration</h2>
+                <p>I build RESTful APIs in Java with Spring Boot, ensuring scalability, security, and documentation with Swagger. I also handle API testing with Postman and integrate third-party services seamlessly.</p>
+                <a href="#">Learn More..</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>Database Design & Optimization</h2>
+                <p>I design and optimize relational (MySQL, PostgreSQL) and NoSQL (MongoDB) databases for applications. This includes schema design, performance tuning, and implementing best practices for data security and reliability.</p>
+                <a href="#">Learn More..</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Portfolio-->
+<div id="portfolio">
+    <div class="container">
+         <h1 class="sub-tytle">My Work</h1>
+         <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Dham Yatra</h3>
+                    <p>
+                        A simple web project built with HTML & CSS, showcasing top temples across 6 Indian states to explore India’s spiritual heritage.
+                    </p>
+                    <a href=" https://kiran-k-k.github.io/Dham_Yatra/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Save Me</h3>
+                    <p>
+                        An awareness-driven project built with HTML, CSS & JS, showcasing rare species, wildlife conservation importance, and NGOs working for animal welfare. 
+                    </p>
+                    <a href="https://kiran-k-k.github.io/Saveme/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Prep4Role</h3>
+                    <p>
+                       An AI-powered mock interview helper built with Next.js, Tailwind CSS, HTML & JS, enabling users to practice interviews with voice input, AI-generated questions, and performance feedback.
+                    </p>
+                    <a href="https://ai-interview-mock-helper.vercel.app/sign-in?redirect_url=https%3A%2F%2Fai-interview-mock-helper.vercel.app%2Fdashboard"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+         </div>
+         <a href="https://github.com/kiran-k-k" class="btn">See more..</a>
+    </div>
+</div>
+
+<!--Contact-->
+
+<div class="contact" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left" id="CV">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> kendrek57@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 9322424121</p>
+                <div class="social-icons">
+                    <a href="https://m.facebook.com/profile.php?id=61577003640484"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/kiran-k-k"><i class="fa-brands fa-github"></i></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/kiran-kendre/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Name" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Kiran Kendre | Designed & Built with <i class="fa-solid fa-heart"></i> | All Rights Reserved.</p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzjUyMwDu4WjJzgUf1EaoQdm_86J9ivJCF0QqCSybsWKjYA8FLtixAi6ip2RgpZhpT1/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+      msg.innerHTML = "Message sent successfully";
+      setTimeout(function () {
+        msg.innerHTML = "";
+      }, 5000);
+      form.reset();
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
