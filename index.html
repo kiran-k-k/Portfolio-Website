@@ -3,86 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Kendre</title>
+    <title>Kiran Kendre - Portfolio</title>
 
     <!-- ✅ Favicon setup -->
     <link rel="icon" href="images/Icon.png" type="image/png">
     <link rel="apple-touch-icon" href="images/Icon.png">
-    <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="certificates.css">
+    <meta name="theme-color" content="#080808">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="certificates.css">
+    
+    <!-- FontAwesome icons -->
     <script src="https://kit.fontawesome.com/a1858b4ce2.js" crossorigin="anonymous"></script>
+    
+    <!-- SEO Meta Tags -->
     <meta name="title" content="Kiran Kendre - Portfolio Website">
-    <meta name="description" content="Personal portfolio of Kiran Kendre, Full Stack Developer. Showcasing skills, projects, and contact information.">
-    <meta name="keywords" content="Kiran Kendre, Portfolio, Full Stack Developer, Java Developer, Projects, Resume">
+    <meta name="description" content="Personal portfolio of Kiran Kendre, Full Stack Developer. Showcasing skills, projects, and credentials.">
+    <meta name="keywords" content="Kiran Kendre, Portfolio, Full Stack Developer, Java Developer, Projects, Resume, Java Full Stack">
     <meta name="author" content="Kiran Kishanrao Kendre">
 </head>
 <body>
+
+<!-- Background Glow Blobs -->
+<div class="glow-blob glow-blob-1"></div>
+<div class="glow-blob glow-blob-2"></div>
+
+<!-- Sticky Glassmorphic Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <img src="images/logo.jpeg" class="logo" alt="Kiran Kendre Logo">
+        <ul id="sidemenu">
+            <li><a href="#header" onclick="closemenu()">Home</a></li>
+            <li><a href="#about" onclick="closemenu()">About</a></li>
+            <li><a href="#services" onclick="closemenu()">Services</a></li>
+            <li><a href="#portfolio" onclick="closemenu()">Work</a></li>
+            <li><a href="#certificate" onclick="closemenu()">Certificates</a></li>
+            <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+            <li><a href="images/Resume.pdf" onclick="closemenu()" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()" aria-label="Close menu"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()" aria-label="Open menu"></i>
+    </div>
+</nav>
+
+<!-- Hero Section -->
 <div id="header">
     <div class="container">
-        <nav>
-            <img src="images/logo.jpeg" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header" onclick="closemenu()">Home</a></li>
-                <li><a href="#about" onclick="closemenu()">About</a></li>
-                <li><a href="#services" onclick="closemenu()">Services</a></li>
-                <li><a href="#contact" onclick="closemenu()">contact</a></li>
-                <li><a href="#certificate" onclick="closemenu()">Certificates</a></li>
-                <li><a href="images/Resume.pdf" onclick="closemenu()">Resume</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="headet-text">
-           <p>Hi, I am </p>
-            <h1><span>K</span>iran Kendre<br>  Fullstack Devloper</h1>
+        <div class="header-text">
+            <p>Hi, I am </p>
+            <h1><span>K</span>iran Kendre</h1>
+            <div class="typewriter-wrapper">
+                I am a <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+            </div>
+        </div>
+        
+        <!-- Animated Scroll Cue -->
+        <div class="scroll-cue">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
         </div>
     </div>
 </div>
+
 <!-- -------About------ -->
 <div id="about">
-    <div class="cointaner">
+    <div class="container">
         <div class="row">
-            <div class="about-col-1">
-                <img src="images/user.jpg">
+            <div class="about-col-1 scroll-reveal">
+                <img src="images/user.jpg" alt="Kiran Kendre Profile Photo">
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-tytle">About Me</h1>
-                <p>     I am Kiran Kishanrao Kendre, a passionate and dedicated engineering student currently 
-                    in my fourth year. With a strong interest in technology, programming, and problem-solving, 
-                    I continuously strive to enhance my skills and knowledge in the field of software development. 
-                    I enjoy exploring new tools and frameworks, and I am currently learning full stack development
-                    and data science to broaden my expertise. I believe in consistent learning, teamwork, and 
-                    building solutions that create a positive impact. My goal is to grow as a professional while 
-                    contributing to meaningful projects and innovations.
+            <div class="about-col-2 scroll-reveal">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am Kiran Kishanrao Kendre, a passionate and dedicated engineering student currently 
+                   in my fourth year. With a strong interest in technology, programming, and problem-solving, 
+                   I continuously strive to enhance my skills and knowledge in the field of software development. 
+                   I enjoy exploring new tools and frameworks, and I am currently learning full stack development 
+                   and data science to broaden my expertise. I believe in consistent learning, teamwork, and 
+                   building solutions that create a positive impact. My goal is to grow as a professional while 
+                   contributing to meaningful projects and innovations.
                 </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                 </div>
+                
+                <!-- Skills Pills (Capsules) Tab -->
                 <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><Span>Programming Languages</Span><br>C, C++, & Java </li>
-                        <li><Span>Web Development</Span><br>HTML, CSS, JavaScript, Bootstrap, React.js / Angular</li>
-                        <li><Span>Backend</Span><br>Core Java, Java EE, Spring Framework, Spring Boot, REST APIs</li>
-                        <li><Span>Database</Span><br>MySQL, MongoDB (NoSQL concepts)</li>
-                        <li><Span>Version Control</Span><br>Git, GitHub</li>
-                        <li><Span>Soft Skills</Span><br>Problem-solving, Team collaboration, Communication, Time management, Critical thinking, Adaptability</li>
-                    </ul>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <div class="skills-list-pills">
+                                <span class="skill-pill"><i class="fa-solid fa-code"></i> C</span>
+                                <span class="skill-pill"><i class="fa-solid fa-terminal"></i> C++</span>
+                                <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Web Development</h3>
+                            <div class="skills-list-pills">
+                                <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML</span>
+                                <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span class="skill-pill"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                <span class="skill-pill"><i class="fa-brands fa-react"></i> React.js</span>
+                                <span class="skill-pill"><i class="fa-brands fa-angular"></i> Angular</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend</h3>
+                            <div class="skills-list-pills">
+                                <span class="skill-pill"><i class="fa-brands fa-java"></i> Core Java</span>
+                                <span class="skill-pill"><i class="fa-brands fa-java"></i> Java EE</span>
+                                <span class="skill-pill"><i class="fa-solid fa-leaf"></i> Spring Framework</span>
+                                <span class="skill-pill"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+                                <span class="skill-pill"><i class="fa-solid fa-gears"></i> REST APIs</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Database &amp; Version Control</h3>
+                            <div class="skills-list-pills">
+                                <span class="skill-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+                                <span class="skill-pill"><i class="fa-solid fa-envira"></i> MongoDB</span>
+                                <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+                                <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Soft Skills</h3>
+                            <div class="skills-list-pills">
+                                <span class="skill-pill"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+                                <span class="skill-pill"><i class="fa-solid fa-users"></i> Team Collaboration</span>
+                                <span class="skill-pill"><i class="fa-solid fa-comments"></i> Communication</span>
+                                <span class="skill-pill"><i class="fa-solid fa-clock"></i> Time Management</span>
+                                <span class="skill-pill"><i class="fa-solid fa-brain"></i> Critical Thinking</span>
+                                <span class="skill-pill"><i class="fa-solid fa-sliders"></i> Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-contents" id="experiance">
-                    <ul>
-                        <li><Span>Java Full Stack Developer Virtual Internship</Span><br>Completed a 10-week virtual internship in Java Full Stack Development under the National Internship Portal, supported by AICTE and EduSkills. Gained hands-on experience with backend technologies like Java and Spring Boot, and frontend tools such as HTML, CSS, and JavaScript. Built end-to-end applications, improved debugging and deployment skills, and worked collaboratively in virtual team environments.</li>
-                        <li><Span>Technical Event Coordinator – CSE Department</Span><br>Led the organization of college-level technical events and industrial visits as part of the Computer Science Department. Successfully coordinated the “Reflex 2K25” national techfest, managing event logistics, technical activities, registrations, and team coordination. Additionally, organized an industrial visit, handling communication with the company, travel planning, and ensuring a valuable learning experience for participants. Developed leadership, public speaking, planning, and collaboration skills.</li>
-                    </ul>
+                
+                <!-- Experience Timeline Tab -->
+                <div class="tab-contents" id="experience">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Java Full Stack Developer Virtual Internship</h3>
+                                <div class="timeline-subtitle">
+                                    <span>EduSkills &amp; AICTE</span>
+                                    <span class="timeline-date">10 Weeks</span>
+                                </div>
+                                <p class="timeline-desc">Completed a 10-week virtual internship in Java Full Stack Development under the National Internship Portal, supported by AICTE and EduSkills. Gained hands-on experience with backend technologies like Java and Spring Boot, and frontend tools such as HTML, CSS, and JavaScript. Built end-to-end applications, improved debugging and deployment skills, and worked collaboratively in virtual team environments.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Technical Event Coordinator</h3>
+                                <div class="timeline-subtitle">
+                                    <span>CSE Department, AMGOI</span>
+                                    <span class="timeline-date">2025</span>
+                                </div>
+                                <p class="timeline-desc">Led the organization of college-level technical events and industrial visits as part of the Computer Science Department. Successfully coordinated the “Reflex 2K25” national techfest, managing event logistics, technical activities, registrations, and team coordination. Additionally, organized an industrial visit, handling communication with the company, travel planning, and ensuring a valuable learning experience for participants. Developed leadership, public speaking, planning, and collaboration skills.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Education Timeline Tab -->
                 <div class="tab-contents" id="education">
-                    <ul>
-                        <li><Span>Bachelor of Technology in Computer Science and Engineering</Span><br>Ashokrao Mane Group of Institution, Vathar.   ​CGPA: 7.01</li>
-                        <li><Span>Class XII</Span><br>Narsamata Post Basic Ashram School, Nawandi ​Percentage: 63.33</li>
-                    </ul>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Bachelor of Technology in Computer Science and Engineering</h3>
+                                <div class="timeline-subtitle">
+                                    <span>Ashokrao Mane Group of Institutions, Vathar</span>
+                                    <span class="timeline-date">CGPA: 7.01</span>
+                                </div>
+                                <p class="timeline-desc">Currently in my fourth year of engineering, building solid theoretical foundation and hands-on skills in core computing domains like Operating Systems, Databases, Software Engineering, and Web Frameworks.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Class XII (HSC)</h3>
+                                <div class="timeline-subtitle">
+                                    <span>Narsamata Post Basic Ashram School, Nawandi</span>
+                                    <span class="timeline-date">Percentage: 63.33%</span>
+                                </div>
+                                <p class="timeline-desc">Completed high school education with a focus on science, mathematics, and fundamentals of computer science.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,66 +213,60 @@
 </div>
 
 <!--services-->
-
 <div id="services">
     <div class="container">
-        <h1 class="sub-tytle">My Services</h1>
+        <h1 class="sub-title">My Services</h1>
         <div class="services-list">
-            <div>
+            <div class="scroll-reveal">
                 <i class="fa-solid fa-code"></i>
                 <h2>Full Stack Web Development</h2>
                 <p>I provide end-to-end web application development using React (frontend) and Spring Boot (backend) integrated with MySQL/MongoDB. This service includes responsive UI, secure APIs, and deployment-ready solutions for businesses.</p>
             </div>
-            <div>
+            <div class="scroll-reveal">
                 <i class="fa-solid fa-table"></i>
-                <h2>API Development & Integration</h2>
+                <h2>API Development &amp; Integration</h2>
                 <p>I build RESTful APIs in Java with Spring Boot, ensuring scalability, security, and documentation with Swagger. I also handle API testing with Postman and integrate third-party services seamlessly.</p>
             </div>
-            <div>
+            <div class="scroll-reveal">
                 <i class="fa-brands fa-java"></i>
-                <h2>Database Design & Optimization</h2>
+                <h2>Database Design &amp; Optimization</h2>
                 <p>I design and optimize relational (MySQL, PostgreSQL) and NoSQL (MongoDB) databases for applications. This includes schema design, performance tuning, and implementing best practices for data security and reliability.</p>
             </div>
         </div>
     </div>
 </div>
+
 <!--Portfolio-->
 <div id="portfolio">
     <div class="container">
-         <h1 class="sub-tytle">My Work</h1>
+         <h1 class="sub-title">My Work</h1>
          <div class="work-list">
-            <div class="work">
-                <img src="images/work-1.png">
+            <div class="work scroll-reveal">
+                <img src="images/work-1.webp" alt="Dham Yatra Project Screenshot">
                 <div class="layer">
                     <h3>Dham Yatra</h3>
-                    <p>
-                        A simple web project built with HTML & CSS, showcasing top temples across 6 Indian states to explore India’s spiritual heritage.
-                    </p>
-                    <a href=" https://kiran-k-k.github.io/Dham_Yatra/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <p>A simple web project built with HTML &amp; CSS, showcasing top temples across 6 Indian states to explore India’s spiritual heritage.</p>
+                    <a href="https://kiran-k-k.github.io/Dham_Yatra/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dham Yatra Project Website"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="work">
-                <img src="images/work-2.png">
+            <div class="work scroll-reveal">
+                <img src="images/work-2.webp" alt="Save Me Project Screenshot">
                 <div class="layer">
                     <h3>Save Me</h3>
-                    <p>
-                        An awareness-driven project built with HTML, CSS & JS, showcasing rare species, wildlife conservation importance, and NGOs working for animal welfare. 
-                    </p>
-                    <a href="https://kiran-k-k.github.io/Saveme/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <p>An awareness-driven project built with HTML, CSS &amp; JS, showcasing rare species, wildlife conservation importance, and NGOs working for animal welfare.</p>
+                    <a href="https://kiran-k-k.github.io/Saveme/" target="_blank" rel="noopener noreferrer" aria-label="Visit Save Me Project Website"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="work">
-                <img src="images/work-3.png">
+            <div class="work scroll-reveal">
+                <img src="images/work-3.webp" alt="Prep4Role Project Screenshot">
                 <div class="layer">
                     <h3>Prep4Role</h3>
-                    <p>
-                       An AI-powered mock interview helper built with Next.js, Tailwind CSS, HTML & JS, enabling users to practice interviews with voice input, AI-generated questions, and performance feedback.
-                    </p>
-                    <a href="https://ai-interview-mock-helper.vercel.app/sign-in?redirect_url=https%3A%2F%2Fai-interview-mock-helper.vercel.app%2Fdashboard"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <p>An AI-powered mock interview helper built with Next.js, Tailwind CSS, HTML &amp; JS, enabling users to practice interviews with voice input, AI-generated questions, and performance feedback.</p>
+                    <a href="https://ai-interview-mock-helper.vercel.app/sign-in?redirect_url=https%3A%2F%2Fai-interview-mock-helper.vercel.app%2Fdashboard" target="_blank" rel="noopener noreferrer" aria-label="Visit Prep4Role Project Website"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
          </div>
-         <a href="https://github.com/kiran-k-k" class="btn">See more..</a>
+         <a href="https://github.com/kiran-k-k" class="btn" target="_blank" rel="noopener noreferrer">See more..</a>
     </div>
 </div>
 
@@ -177,7 +294,7 @@
         <div class="cert-grid">
 
             <!-- 1 -->
-            <div class="cert-item">
+            <div class="cert-item scroll-reveal">
                 <div class="cert-card" onclick="openModal('Certificates/Java Full Stack Developer virtual internship.jpg')">
                     <img src="Certificates/Java Full Stack Developer virtual internship.jpg" alt="Java Full Stack Developer Virtual Internship">
                     <div class="cert-overlay">
@@ -189,12 +306,12 @@
                     <div class="cert-number">01</div>
                     <h3>Java Full Stack Developer Virtual Internship</h3>
                     <p class="cert-platform"><i class="fa-solid fa-building-columns"></i> EduSkills &amp; AICTE</p>
-                    <a href="https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=ca1095ed7aa22998c63a0ae9e31eee0c" target="_blank" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
+                    <a href="https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=ca1095ed7aa22998c63a0ae9e31eee0c" target="_blank" rel="noopener noreferrer" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
                 </div>
             </div>
 
             <!-- 2 -->
-            <div class="cert-item">
+            <div class="cert-item scroll-reveal">
                 <div class="cert-card" onclick="openModal('Certificates/Java FullStack Developer.jpg')">
                     <img src="Certificates/Java FullStack Developer.jpg" alt="Java FullStack Developer Specialization">
                     <div class="cert-overlay">
@@ -206,12 +323,12 @@
                     <div class="cert-number">02</div>
                     <h3>Java FullStack Developer Specialization</h3>
                     <p class="cert-platform"><i class="fa-solid fa-building-columns"></i> Coursera &amp; Board Infinity</p>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/3GAVYTBBX30U" target="_blank" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/3GAVYTBBX30U" target="_blank" rel="noopener noreferrer" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
                 </div>
             </div>
 
             <!-- 3 -->
-            <div class="cert-item">
+            <div class="cert-item scroll-reveal">
                 <div class="cert-card" onclick="openModal('Certificates/Java- Data Structures and Algorithms.jpg')">
                     <img src="Certificates/Java- Data Structures and Algorithms.jpg" alt="Java Data Structures and Algorithms">
                     <div class="cert-overlay">
@@ -223,12 +340,12 @@
                     <div class="cert-number">03</div>
                     <h3>Java: Data Structures and Algorithms Specialization</h3>
                     <p class="cert-platform"><i class="fa-solid fa-building-columns"></i> Coursera &amp; Codio</p>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/LLLRSKTEK5A8" target="_blank" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/LLLRSKTEK5A8" target="_blank" rel="noopener noreferrer" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
                 </div>
             </div>
 
             <!-- 4 -->
-            <div class="cert-item">
+            <div class="cert-item scroll-reveal">
                 <div class="cert-card" onclick="openModal('Certificates/Java Programming Fundamentals.jpg')">
                     <img src="Certificates/Java Programming Fundamentals.jpg" alt="Java Programming Fundamentals">
                     <div class="cert-overlay">
@@ -240,12 +357,12 @@
                     <div class="cert-number">04</div>
                     <h3>Java Programming Fundamentals</h3>
                     <p class="cert-platform"><i class="fa-solid fa-building-columns"></i> Infosys Springboard</p>
-                    <a href="https://verify.onwingspan.com/" target="_blank" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate Scan QR code</a>
+                    <a href="https://verify.onwingspan.com/" target="_blank" rel="noopener noreferrer" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
                 </div>
             </div>
 
             <!-- 5 -->
-            <div class="cert-item">
+            <div class="cert-item scroll-reveal">
                 <div class="cert-card" onclick="openModal('Certificates/cpp-certificate.png')">
                     <img src="Certificates/cpp-certificate.png" alt="C++ Course: Learn the Essentials">
                     <div class="cert-overlay">
@@ -261,7 +378,7 @@
             </div>
 
             <!-- 6 -->
-            <div class="cert-item">
+            <div class="cert-item scroll-reveal">
                 <div class="cert-card" onclick="openModal('Certificates/C Programming.png')">
                     <img src="Certificates/C Programming.png" alt="C Programming">
                     <div class="cert-overlay">
@@ -273,61 +390,69 @@
                     <div class="cert-number">06</div>
                     <h3>C Programming</h3>
                     <p class="cert-platform"><i class="fa-solid fa-building-columns"></i> GUVI | HCL</p>
-                    <a href="https://www.guvi.in/verify-certificate?id=77f8593Zp30L2e4s10" target="_blank" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
+                    <a href="https://www.guvi.in/verify-certificate?id=77f8593Zp30L2e4s10" target="_blank" rel="noopener noreferrer" class="cert-verify-btn"><i class="fa-solid fa-shield-check"></i> Verify Certificate</a>
                 </div>
             </div>
 
         </div>
-        
     </div>
 </div>
 
 <!-- Lightbox Modal -->
 <div id="certModal" class="modal" onclick="closeModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
-        <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
-        <img id="modalImg" src="" alt="Certificate">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close image viewer"><i class="fa-solid fa-xmark"></i></button>
+        <img id="modalImg" src="" alt="Expanded Certificate View">
     </div>
 </div>
 
 <!--Contact-->
-
 <div class="contact" id="contact">
     <div class="container">
         <div class="row">
-            <div class="contact-left" id="CV">
+            <div class="contact-left scroll-reveal" id="CV">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><a href="mailto:kendrek57@gmail.com"><i class="fa-solid fa-paper-plane"></i></a> kendrek57@gmail.com</p>
-                <p><a href="tel:+919322424121"><i class="fa-solid fa-phone"></a></i>+91 9322424121</p>
+                <p>
+                    <a href="mailto:kendrek57@gmail.com" aria-label="Send email to Kiran Kendre">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </a>
+                    kendrek57@gmail.com
+                </p>
+                <p>
+                    <a href="tel:+919322424121" aria-label="Call Kiran Kendre">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    +91 9322424121
+                </p>
                 <div class="social-icons">
-                    <a href="https://m.facebook.com/profile.php?id=61577003640484"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://github.com/kiran-k-k"><i class="fa-brands fa-github"></i></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/kiran-kendre/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://m.facebook.com/profile.php?id=61577003640484" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/kiran-k-k" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/kiran-kendre/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                <a href="images/Resume.pdf" download="Kiran_Kendre_Resume.pdf" class="btn btn2" target="_blank" rel="noopener noreferrer">Download CV</a>
             </div>
-            <div class="contact-right">
+            <div class="contact-right scroll-reveal">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
-
             </div>
         </div>
     </div>
     <div class="copyright">
-        <p>&copy; 2025 Kiran Kendre | Designed & Built with <i class="fa-solid fa-heart"></i> | All Rights Reserved.</p>
+        <p>&copy; 2025 Kiran Kendre | Designed &amp; Built with <i class="fa-solid fa-heart"></i> | All Rights Reserved.</p>
     </div>
 </div>
+
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
+    function opentab(event, tabname){
         for(tablink of tablinks){
             tablink.classList.remove("active-link");
         }
@@ -381,9 +506,72 @@
       }, 5000);
       form.reset();
     })
-      .catch(error => console.error('Error!', error.message))
+      .catch(error => {
+      console.error('Error!', error.message);
+      msg.innerHTML = "Error sending message. Please try again.";
+      setTimeout(function () {
+        msg.innerHTML = "";
+      }, 5000);
+    })
   })
 </script>
+
+<script>
+    // 💡 Typewriter effect
+    const typedTextSpan = document.getElementById("typewriter-text");
+    const textArray = ["Fullstack Developer", "Java Developer", "API & Database Engineer", "Problem Solver"];
+    const typingDelay = 100;
+    const erasingDelay = 60;
+    const newTextDelay = 2000;
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+        } else {
+            setTimeout(erase, newTextDelay);
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+        } else {
+            textArrayIndex++;
+            if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+            setTimeout(type, typingDelay + 500);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        if(textArray.length) setTimeout(type, 1000);
+    });
+
+    // 💡 IntersectionObserver Scroll Reveal
+    document.addEventListener("DOMContentLoaded", function() {
+        const revealElements = document.querySelectorAll(".scroll-reveal");
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("reveal-active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -40px 0px"
+        });
+        
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+    });
+</script>
 </body>
-</html>
 </html>
